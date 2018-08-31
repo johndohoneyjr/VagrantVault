@@ -7,7 +7,23 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y git-core
 apt-get install -y unzip
+apt-get install -y jq
 apt-get install -y --no-install-recommends vim
+
+# Add GPG Key
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Add the Docker repository to APT sources
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+apt-cache policy docker-ce
+
+# Install Docker with latest Policy
+sudo apt-get install -y docker-ce
+
+sudo systemctl status docker
 
 # set system configuration.
 rm -f /{root,home/*}/.{profile,bashrc}
