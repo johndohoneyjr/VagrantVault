@@ -1,6 +1,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.define "vault" do |vault|
+
     vault.vm.box = "bento/ubuntu-16.04"
     vault.vm.hostname = 'vault'
     vault.vm.box_url = "bento/ubuntu-16.04"

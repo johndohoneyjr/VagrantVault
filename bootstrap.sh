@@ -1,5 +1,7 @@
 #!/bin/bash
-
+#
+# Uses Community Edition
+#
 sudo yum install -y wget
 wget https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 sudo yum install -y mysql57-community-release-el7-8.noarch.rpm

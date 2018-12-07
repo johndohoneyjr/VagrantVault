@@ -1,4 +1,6 @@
 #!/bin/bash
+
+## See what is happening, can be commented out
 set -eux
 
 sudo su

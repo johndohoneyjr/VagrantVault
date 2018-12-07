@@ -1,7 +1,7 @@
 #!/bin/bash
 # abort this script on errors.
 set -eux
-
+# Debian based
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
